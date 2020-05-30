@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+@use './assets/styles/reset.scss';
+@use './assets/styles/vars.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap');
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+}
