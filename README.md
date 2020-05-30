@@ -2,4 +2,4 @@
 
 ### Branches:
 
-:point_right: [`lesson-1 / basics`](link)
+:point_right: [`lesson-1 / basics`](https://github.com/AnjKrynskyi/ng-learn/tree/lesson-1/basics)
