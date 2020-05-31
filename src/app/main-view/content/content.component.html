@@ -1,1 +1,16 @@
-<p>content works!</p>
+<main class="content">
+  <div class="content__section">
+    <h1 class="content__section-title">
+      Ask your yes or no question and get answer
+    </h1>
+    <div class="input-group" [class.focus]="question">
+      <input type="text" class="input-group__input" [(ngModel)]="question" (input)="onInput()" />
+      <span class="input-group__placeholder" data-placeholder="Your question"></span>
+    </div>
+  </div>
+  <div class="content__section">
+    <div class="text-box">
+      <span>{{ answer }}</span>
+    </div>
+  </div>
+</main>

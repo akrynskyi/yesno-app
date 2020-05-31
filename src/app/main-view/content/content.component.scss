@@ -1,0 +1,48 @@
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  &__section {
+    width: calc(50% - 30px);
+    &-title {
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.text-box {
+  position: relative;
+  min-height: 65px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  background-color: var(--neutral-regular);
+  color: var(--default-color);
+  border-radius: 8px;
+  box-shadow:
+    0 1.7px 1px rgba(0, 0, 0, 0.07),
+    0 2.8px 2.4px rgba(0, 0, 0, 0.07),
+    0 3.5px 4.4px rgba(0, 0, 0, 0.069),
+    0 4.1px 7.2px rgba(0, 0, 0, 0.067),
+    0 4.6px 11.2px rgba(0, 0, 0, 0.064),
+    0 5.5px 17px rgba(0, 0, 0, 0.057),
+    0 7.1px 26.1px rgba(0, 0, 0, 0.047),
+    0 10px 40px rgba(0, 0, 0, 0.03)
+  ;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: var(--neutral-primary);
+  }
+}
