@@ -42,7 +42,7 @@
 		border-radius: 2em;
 		padding: 2px;
 		transition: all .4s ease;
-		border: 1px solid var(--base);
+		border: 1px solid var(--neutral-placeholder);
 		&:after {
 			border-radius: 2em;
 			background: var(--default-color);
@@ -61,7 +61,7 @@
     }
 
 		&:active {
-			box-shadow: inset 0 0 0 2em var(--base);
+			box-shadow: inset 0 0 0 2em var(--neutral-placeholder);
 			&:after {
 				padding-right: .8em;
 			}
@@ -69,7 +69,7 @@
 	}
 
 	&:checked + .tgl-btn {
-    background: #86d993;
+    background: var(--neutral-extra);
     &:active {
       box-shadow: none;
       &:after {
@@ -78,5 +78,3 @@
     }
 	}
 }
-
-// color #e8eae9

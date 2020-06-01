@@ -3,8 +3,9 @@
   justify-content: center;
 
   &__text {
+    color: var(--text-primary);
     & > i {
-      color: var(--neutral-secondary);
+      color: var(--accent-color);
       margin-right: 10px;
     }
   }

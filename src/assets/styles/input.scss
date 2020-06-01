@@ -23,11 +23,11 @@
     outline: none;
     background: none;
     font-size: 18px;
-    padding: 20px 10px;
+    padding: 20px 10px 15px 10px;
 
     &:focus + .input-group__placeholder::before {
-      top: 12px;
-      transform: translateY(-50%) scale(.9);
+      top: 15px;
+      transform: translateY(-50%) scale(.8);
       color: var(--neutral-secondary);
     }
   }
@@ -37,8 +37,7 @@
     position: absolute;
     top: 50%;
     left: 10px;
-    font-size: 16px;
-    font-weight: 300;
+    font-weight: 500;
     color: var(--neutral-main);
     transform: translateY(-50%) scale(1);
     transform-origin: left;
@@ -47,8 +46,8 @@
   }
 
   &.focus > &__placeholder::before {
-    top: 12px;
-    transform: translateY(-50%) scale(.9);
+    top: 15px;
+    transform: translateY(-50%) scale(.8);
     color: var(--neutral-secondary);
   }
 

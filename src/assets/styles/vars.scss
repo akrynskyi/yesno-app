@@ -6,11 +6,32 @@
   --lighter: #ebeef5;
   --lightex: #f2f6fc;
 
-  // -------------------------------
+  /* ------------------------------- */
 
   --neutral-main: #232425;
   --neutral-primary: #303133;
+  --neutral-extra: #323a3a;
   --neutral-regular: #606266;
   --neutral-secondary: #909399;
   --neutral-placeholder: #c0c4cc;
+
+  /* ------------------------------- */
+
+  --accent-color: #b21430;
 }
+
+/* -------- light theme -------- */
+
+.app-wrapper[data-theme="light"] {
+  --bgc: var(--lighter);
+  --text-primary: var(--neutral-main);
+}
+
+/* -------- dark theme -------- */
+
+.app-wrapper[data-theme="dark"] {
+  --bgc: #191f24;
+  --text-primary: #e9f1d7;
+}
+
+
