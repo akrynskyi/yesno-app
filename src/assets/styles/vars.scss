@@ -1,4 +1,6 @@
 :root {
+  --fsize: 18px;
+
   --default-color: #fff;
 
   --base: #dcdfe6;
@@ -18,6 +20,13 @@
   /* ------------------------------- */
 
   --accent-color: #b21430;
+
+  @media (max-width: 570px) {
+    --fsize: 16px;
+  }
+  @media (max-width: 495px) {
+    --fsize: 14px;
+  }
 }
 
 /* -------- light theme -------- */

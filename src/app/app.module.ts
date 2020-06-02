@@ -8,6 +8,7 @@ import { MainViewComponent } from './main-view/main-view.component';
 import { HeaderComponent } from './main-view/header/header.component';
 import { ContentComponent } from './main-view/content/content.component';
 import { FooterComponent } from './main-view/footer/footer.component';
+import { CapitalizePipe } from './pipes/capitalize.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FooterComponent } from './main-view/footer/footer.component';
     MainViewComponent,
     HeaderComponent,
     ContentComponent,
-    FooterComponent
+    FooterComponent,
+    CapitalizePipe
   ],
   imports: [
     BrowserModule,

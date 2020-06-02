@@ -10,7 +10,14 @@
   </div>
   <div class="content__section">
     <div class="text-box">
-      <span>{{ answer }}</span>
+      <span>{{ answer | capitalize }}</span>
+      <div class="loader" [class.active]="loading">
+        <div class="ball-pulse">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
     </div>
   </div>
 </main>

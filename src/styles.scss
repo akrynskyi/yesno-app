@@ -2,12 +2,13 @@
 @use './assets/styles/vars.scss';
 @use './assets/styles/toggle.scss';
 @use './assets/styles/input.scss';
+@use './assets/styles/loader.scss';
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
+  font-size: var(--fsize);
 }
 
 .container {

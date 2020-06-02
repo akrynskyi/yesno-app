@@ -1,0 +1,15 @@
+@import '~loaders.css/src/animations/ball-pulse.scss';
+
+.loader {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .1 ease;
+  &.active {
+    opacity: 1;
+  }
+}
+
+.ball-pulse > div {
+  width: 8px;
+  height: 8px;
+}

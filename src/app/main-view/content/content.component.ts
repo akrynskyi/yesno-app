@@ -17,6 +17,7 @@ export class ContentComponent implements OnInit {
   question = '';
   answer = 'Answer here...';
   timeoutHandle: any;
+  loading = false;
 
   constructor(private http: HttpClient) { }
 
@@ -25,10 +26,13 @@ export class ContentComponent implements OnInit {
   onInput() {
     clearTimeout(this.timeoutHandle);
     this.answer = 'Waiting for you to stop typing...';
+    this.loading = true;
     this.timeoutHandle = setTimeout(() => this.getAnswer(), 1000);
   }
 
   getAnswer() {
+    this.loading = false;
+
     if (!this.question.length) {
       this.answer = 'Answer here...'
       return
@@ -38,11 +42,12 @@ export class ContentComponent implements OnInit {
       return
     }
 
+    this.loading = true;
     this.answer = 'Thinking...';
 
     this.request()
       .subscribe(
-        resp => (this.answer = resp.answer),
+        resp => (this.answer = resp.answer, this.loading = false),
         err => console.error(err)
       );
   }
@@ -51,7 +56,7 @@ export class ContentComponent implements OnInit {
     return this.http.get<IAnswer>('https://yesno.wtf/api')
       .pipe(
         map(resp => ({
-          answer: `${resp.answer.charAt(0).toUpperCase()}${resp.answer.slice(1)}`,
+          answer: resp.answer,
           image: resp.image
         })),
         catchError(err => {
