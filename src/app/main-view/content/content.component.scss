@@ -20,6 +20,12 @@
       @media (max-width: 495px) {
         font-size: 18px;
       }
+      @media (max-width: 440px) {
+        font-size: 16px;
+      }
+      @media (max-width: 395px) {
+        font-size: 14px;
+      }
     }
 
     @media (max-width: 940px) {
@@ -50,4 +56,10 @@
     0 7.1px 26.1px rgba(0, 0, 0, 0.047),
     0 10px 40px rgba(0, 0, 0, 0.03)
   ;
+
+  & > span {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }

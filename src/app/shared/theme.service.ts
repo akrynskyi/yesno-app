@@ -16,7 +16,7 @@ export class ThemeService {
   }
 
   getThemeMode() {
-    const mode = localStorage.getItem('mode') ? localStorage.getItem('mode') : null;
+    const mode = localStorage.getItem('mode') ? localStorage.getItem('mode') : 'light';
     this.theme.next(mode);
   }
 }

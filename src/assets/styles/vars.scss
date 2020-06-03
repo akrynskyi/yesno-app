@@ -1,4 +1,5 @@
 :root {
+  --title-size: 24px;
   --fsize: 18px;
 
   --default-color: #fff;
@@ -22,10 +23,20 @@
   --accent-color: #b21430;
 
   @media (max-width: 570px) {
+    --title-size: 18px;
     --fsize: 16px;
   }
   @media (max-width: 495px) {
+    --title-size: 16px;
     --fsize: 14px;
+  }
+  @media (max-width: 440px) {
+    --title-size: 14px;
+    --fsize: 12px;
+  }
+  @media (max-width: 395px) {
+    --title-size: 12px;
+    --fsize: 10px;
   }
 }
 
@@ -40,7 +51,7 @@
 
 .app-wrapper[data-theme="dark"] {
   --bgc: #191f24;
-  --text-primary: #e9f1d7;
+  --text-primary: var(--base);
 }
 
 

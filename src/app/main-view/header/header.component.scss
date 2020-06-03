@@ -4,14 +4,8 @@
   align-items: center;
 
   &__title {
-    font-size: 24px;
+    font-size: var(--title-size);
     color: var(--text-primary);
-    @media (max-width: 570px) {
-      font-size: 18px;
-    }
-    @media (max-width: 495px) {
-      font-size: 16px;
-    }
   }
 }
 
@@ -23,11 +17,16 @@
   color: var(--text-primary);
   width: 250px;
   @media (max-width: 570px) {
+    justify-content: space-between;
     font-size: 12px;
     width: 200px;
   }
   @media (max-width: 495px) {
     font-size: 10px;
     width: 180px;
+  }
+  @media (max-width: 440px) {
+    font-size: 8px;
+    width: 130px;
   }
 }

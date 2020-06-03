@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map, catchError } from 'rxjs/operators';
 
@@ -18,6 +18,9 @@ export class ContentComponent implements OnInit {
   answer = 'Answer here...';
   timeoutHandle: any;
   loading = false;
+  file = false;
+  lightbox = false;
+  imageURL: string;
 
   constructor(private http: HttpClient) { }
 
@@ -27,6 +30,7 @@ export class ContentComponent implements OnInit {
     clearTimeout(this.timeoutHandle);
     this.answer = 'Waiting for you to stop typing...';
     this.loading = true;
+    this.file = false;
     this.timeoutHandle = setTimeout(() => this.getAnswer(), 1000);
   }
 
@@ -41,13 +45,22 @@ export class ContentComponent implements OnInit {
       this.answer = 'Questions usually contain a question mark "?"'
       return
     }
+    if (this.question.includes('?') && this.question.length < 4) {
+      this.answer = 'You question to short. Question must contain min 4 characters'
+      return
+    }
 
     this.loading = true;
     this.answer = 'Thinking...';
 
     this.request()
       .subscribe(
-        resp => (this.answer = resp.answer, this.loading = false),
+        resp => (
+          this.answer = resp.answer,
+          this.imageURL = resp.image,
+          this.loading = false,
+          this.file = true
+        ),
         err => console.error(err)
       );
   }
