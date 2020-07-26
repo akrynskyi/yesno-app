@@ -1,0 +1,10 @@
+@import '~loaders.css/src/animations/ball-pulse.scss';
+
+.loader {
+  pointer-events: none;
+}
+
+.ball-pulse > div {
+  width: 8px;
+  height: 8px;
+}

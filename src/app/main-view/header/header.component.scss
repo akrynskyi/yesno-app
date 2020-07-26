@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    font-size: var(--title-size);
+    color: var(--text-primary);
+  }
+}
+
+.toggle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 14px;
+  color: var(--text-primary);
+  width: 250px;
+  @media (max-width: 570px) {
+    justify-content: space-between;
+    font-size: 12px;
+    width: 200px;
+  }
+  @media (max-width: 495px) {
+    font-size: 10px;
+    width: 180px;
+  }
+  @media (max-width: 440px) {
+    font-size: 8px;
+    width: 130px;
+  }
+}

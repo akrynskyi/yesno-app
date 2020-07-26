@@ -1,6 +1,5 @@
-# :open_file_folder: `<ng-learn/>`
+# :speech_balloon: `<yesno-question-app/>`
 
-### Branches:
+#### `Small and simple Angular project...`
 
-:point_right: [`lesson-1 / basics`](https://github.com/AnjKrynskyi/ng-learn/tree/lesson-1/basics) | :cloud: [`deployment`](https://ng-lrn.web.app/)
-:point_right: [`lesson-2 / data-binding | directives`](link)
+##### :link: [`Check out deployed version here`](https://yesno-question.web.app/)

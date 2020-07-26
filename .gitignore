@@ -45,8 +45,8 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# Firebase
+
+#Firebase
 .firebase
 .firebaserc
 firebase.json
-

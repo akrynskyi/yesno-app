@@ -1,0 +1,50 @@
+<main class="content">
+  <div class="content__section">
+    <h1 class="content__section-title">
+      Ask your yes or no question and get answer
+    </h1>
+    <div class="input-group" [class.focus]="question">
+      <input
+        type="text"
+        class="input-group__input"
+        [(ngModel)]="question"
+        (input)="onInput()"
+      />
+      <span
+        class="input-group__placeholder"
+        data-placeholder="Your question"
+      ></span>
+    </div>
+  </div>
+  <div class="content__section">
+    <div class="text-box">
+      <span [title]="answer | capitalize">
+        {{ answer | capitalize }}
+      </span>
+      <button
+        class="btn-default btn-file-image"
+        title="GIF"
+        [class.active]="file"
+        (click)="lightbox = !lightbox"
+      >
+        <i class="fas fa-file-image"></i>
+      </button>
+      <div
+        class="loader"
+        *ngIf="loading"
+      >
+        <div class="ball-pulse">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<app-lightbox
+  [imageURL]="imageURL"
+  [toggle]="lightbox"
+  (state)="lightbox = $event"
+></app-lightbox>

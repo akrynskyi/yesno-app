@@ -38,4 +38,19 @@
     --title-size: 12px;
     --fsize: 10px;
   }
+  
+}
+
+/* -------- light theme -------- */
+
+.app-wrapper[data-theme="light"] {
+  --bgc: var(--lighter);
+  --text-primary: var(--neutral-main);
+}
+
+/* -------- dark theme -------- */
+
+.app-wrapper[data-theme="dark"] {
+  --bgc: #191f24;
+  --text-primary: var(--base);
 }
