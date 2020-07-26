@@ -1,11 +1,7 @@
 @import '~loaders.css/src/animations/ball-pulse.scss';
 
 .loader {
-  display: none;
   pointer-events: none;
-  &.active {
-    display: block;
-  }
 }
 
 .ball-pulse > div {

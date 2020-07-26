@@ -8,7 +8,7 @@ import { MainViewComponent } from './main-view/main-view.component';
 import { HeaderComponent } from './main-view/header/header.component';
 import { ContentComponent } from './main-view/content/content.component';
 import { FooterComponent } from './main-view/footer/footer.component';
-import { CapitalizePipe } from './pipes/capitalize.pipe';
+import { CapitalizePipe } from './shared/pipes/capitalize.pipe';
 import { LightboxComponent } from './main-view/content/lightbox/lightbox.component';
 
 @NgModule({
@@ -27,7 +27,8 @@ import { LightboxComponent } from './main-view/content/lightbox/lightbox.compone
     HttpClientModule
   ],
   providers: [
-    Title
+    Title,
+    CapitalizePipe
   ],
   bootstrap: [AppComponent]
 })

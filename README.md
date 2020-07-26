@@ -1,3 +1,5 @@
-# :open_file_folder: `<ng-learn/>`
+# :speech_balloon: `<yesno-question-app/>`
 
-`lesson-1 / basics` | :cloud: [`deployment`](https://ng-lrn.web.app/)
+#### `Small and simple Angular project...`
+
+##### :link: [`Check out deployed version here`](https://yesno-question.web.app/)

@@ -20,4 +20,5 @@ export class LightboxComponent implements OnInit {
     this.toggle = !this.toggle;
     this.state.emit(this.toggle);
   }
+
 }

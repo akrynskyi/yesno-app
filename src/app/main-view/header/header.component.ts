@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ThemeService } from 'src/app/shared/theme.service';
 import { Title } from '@angular/platform-browser';
+import { CapitalizePipe } from 'src/app/shared/pipes/capitalize.pipe';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +15,8 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private themeService: ThemeService,
-    private titleService: Title
+    private titleService: Title,
+    private capitalizePipe: CapitalizePipe
   ) { }
 
   ngOnInit(): void {
@@ -26,10 +28,13 @@ export class HeaderComponent implements OnInit {
 
     if (this.toggle) {
       this.themeService.changeTheme('dark');
-      this.titleService.setTitle(`${this.docTitle} | ${this.themeService.theme.value} mode`);
+      this.titleService
+        .setTitle(`${this.docTitle} | ${this.capitalizePipe.transform(this.themeService.theme.value)} mode`);
     } else {
       this.themeService.changeTheme('light');
-      this.titleService.setTitle(`${this.docTitle} | ${this.themeService.theme.value} mode`);
+      this.titleService
+        .setTitle(`${this.docTitle} | ${this.capitalizePipe.transform(this.themeService.theme.value)} mode`);
     }
   }
+
 }
