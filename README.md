@@ -1,6 +1,4 @@
-## :speech_balloon: `<yesno-app/>`
-
-------------
+# :speech_balloon: `<yesno-app/>`
 
 #### `Small and simple Angular project...`
 
